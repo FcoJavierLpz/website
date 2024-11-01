@@ -1,0 +1,23 @@
+---
+---
+<div class="relative w-[200px] h-[200px] mx-auto my-8">
+  <div class="gear gear-1 w-[100px] h-[100px] top-0 left-[50px] animate-rotate"></div>
+  <div class="gear gear-2 w-20 h-20 bottom-5 left-5 animate-rotate-reverse"></div>
+  <div class="gear gear-3 w-20 h-20 bottom-5 right-5 animate-rotate-reverse"></div>
+</div>
+
+<style>
+  .gear {
+    @apply absolute bg-accent dark:bg-accent rounded-full;
+  }
+
+  .gear::before {
+    content: '';
+    @apply absolute w-5 h-20 bg-accent dark:bg-accent left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[10px];
+  }
+
+  .gear::after {
+    content: '';
+    @apply absolute w-20 h-5 bg-accent dark:bg-accent left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[10px];
+  }
+</style>
